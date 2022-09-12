@@ -20,7 +20,7 @@ pip install requests
 ```
 Startup the app
 ```sh
-getgames.py
+python getgames.py
 ```
 After startup you will see the progressbar "running". 
 
