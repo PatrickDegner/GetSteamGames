@@ -164,8 +164,7 @@ def get_game_info():
     print("Scanning files for starting point...")
     remove_duplicates()
     with open('list_diff.json', 'r', encoding='utf-8') as f:
-        counter += read_json('skiplist.json')
-        counter += read_json('not_released.json')
+        counter += (read_json('skiplist.json') + read_json('not_released.json'))
         for i in json.load(f):
             appid = i
             if appid in get_list('skiplist.json'):
