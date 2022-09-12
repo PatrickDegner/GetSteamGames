@@ -185,6 +185,8 @@ fabric.properties
  .idea
 
 # others
-applist.json
+gamelist.json
 /utils/
 /backup/
+.utils
+.backup
