@@ -167,7 +167,8 @@ def get_game_info():
     with open('list_diff.json', 'r', encoding='utf-8') as f:
         counter += (read_json('skiplist.json') + read_json('not_released.json'))
         for i in json.load(f):
-            shutil.copyfile("gamelist.json", "gamelist.bak")
+            if os.path.isfile('gamelist.bak') == False or os.path.getsize("gamelist.bak") < os.path.getsize("gamelist.json"):
+                shutil.copyfile("gamelist.json", "gamelist.bak")
             appid = i
             if appid in get_list('skiplist.json'):
                 counter += 1
