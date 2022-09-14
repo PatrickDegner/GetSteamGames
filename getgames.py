@@ -1,6 +1,7 @@
 import requests
 import time
 import json
+import shutil
 import os
 import re
 import sys
@@ -166,6 +167,7 @@ def get_game_info():
     with open('list_diff.json', 'r', encoding='utf-8') as f:
         counter += (read_json('skiplist.json') + read_json('not_released.json'))
         for i in json.load(f):
+            shutil.copyfile("gamelist.json", "gamelist.bak")
             appid = i
             if appid in get_list('skiplist.json'):
                 counter += 1

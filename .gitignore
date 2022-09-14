@@ -186,7 +186,10 @@ fabric.properties
 
 # others
 gamelist.json
+/gamelist.json
+applist.json
 /utils/
 /backup/
 .utils
 .backup
+/gamelist.bak
